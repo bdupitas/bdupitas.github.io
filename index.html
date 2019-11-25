@@ -1,52 +1,82 @@
 <!-- 
     Developed by Brandon Dupitas. 
 -->
-<!-- 
-    Raw HTML
--->
+
 <!--
     IMPORT FONTS
 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+
+<!-- 
+    Raw HTML
+-->
 <html>
-    <title>Brandon Dupitas</title>
-    <head>
-       <h1 class="introduction" align = "center">Hi. I'm Brandon.</h1>
-    </head>
-    <div align ="center">
-        <img class="profile_photo" src="upload_/brandon_2019.png" alt="Me">
+<title>Brandon Dupitas</title>
+
+<head>
+    <h1 class="introduction" align="center">Hi. I'm <strong>Brandon</h1>
+</head>
+<div class="photo-div">
+    <img class="profile_photo" src="upload_/brandon_2019.png" alt="Me">
+</div>
+
+<body>
+
+    <div class="about-me">
+        <H3>About me</H3>
+        <p>
+            I am a current student at California State University, Northridge. And my current <em>dream</em> is to be a
+            software developer.
+        </p>
     </div>
 
-    <body>
-     <p align = "center">
-         I am a current senior at Cal State Northridge, studying Computer Science. I am open to all opportunities, please look at my resume.
-     </p>
-     
-     <div align ="center">        
-         <a href="upload_/resume_/resume_8_19.pdf">Click here for my latest resume!</a>
+    <!--  <div>
+        <h4>Qualifications</h4>
+        nbsp
+        <ul></ul>
     </div>
-     
-    </body>
+    -->
+
+
+    <div align="center">
+        <a href="upload_/resume_/resume_8_19.pdf">Click here for my latest resume!</a>
+    </div>
+
+</body>
+
 </html>
 <!--
     Beginner CSS
 -->
 <style>
-.introduction{
-    font-size: 40px;
-    font-family: Roboto, Arial;
-    
-}
-.profile_photo{
-    border: 10px solid lightblue;
-    border-radius: 50%;
-}
-body{
-    background-color: #BB9966;
-    
-}
+    .about-me {
+        background-color: red;
+        padding: 10px 10px 10px 10px;
+        max-width: auto;
+        margin: 100;
+    }
 
+    .photo-div {
 
+        float: left;
+    }
 
+    .introduction {
+        font-size: 40px;
+        font-family: Roboto, Arial;
 
+    }
+
+    .profile_photo {
+        border: 10px solid #6c6061;
+        border-radius: 50%;
+        height: 250;
+        display: block;
+        margin-left: 0;
+    }
+
+    body {
+        background-color: #c1bfb5;
+
+    }
 </style>
