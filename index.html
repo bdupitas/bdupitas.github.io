@@ -14,20 +14,22 @@
 <title>Brandon Dupitas</title>
 
 <head>
-    <h1 class="introduction" align="center">Hi. I'm <strong>Brandon</h1>
+    <h1 class="title" align="center">Hi. I'm <strong>Brandon</h1>
 </head>
 <div class="photo-div">
     <img class="profile_photo" src="upload_/brandon_2019.png" alt="Me">
 </div>
 
 <body>
-
-    <div class="about-me">
-        <H3>About me</H3>
-        <p>
-            I am a current student at California State University, Northridge. And my current <em>dream</em> is to be a
-            software developer.
-        </p>
+    <div class="about-card">
+        <div class="description">
+            <H3 class="about-text">About me</H3>
+            <p class="about-text">
+                I am a current student at California State University, Northridge. And my current <em>dream</em> is to
+                be a
+                software developer.
+            </p>
+        </div>
     </div>
 
     <!--  <div>
@@ -38,8 +40,9 @@
     -->
 
 
-    <div align="center">
-        <a href="upload_/resume_/resume_8_19.pdf">Click here for my latest resume!</a>
+    <div class="resume">
+        <hr>
+        <a href="upload_/resume_/resume_8_19.pdf">Current Resume</a>
     </div>
 
 </body>
@@ -49,26 +52,42 @@
     Beginner CSS
 -->
 <style>
-    .about-me {
-        background-color: red;
+    .about-text {
+        color: white;
+    }
+
+    .resume {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about-card {
+        background-color: #c6bcb6;
         padding: 10px 10px 10px 10px;
-        max-width: auto;
-        margin: 100;
+
+    }
+
+    .description {
+        background-color: #625750;
+        height: 30%;
+        padding: 10px;
     }
 
     .photo-div {
-
+        width: 32%;
         float: left;
+        padding: 24px;
     }
 
-    .introduction {
+    .title {
         font-size: 40px;
         font-family: Roboto, Arial;
+
 
     }
 
     .profile_photo {
-        border: 10px solid #6c6061;
+        border: 10px solid #96897f;
         border-radius: 50%;
         height: 250;
         display: block;
@@ -76,7 +95,7 @@
     }
 
     body {
-        background-color: #c1bfb5;
+        background-color: #e0e2e4;
 
     }
 </style>
