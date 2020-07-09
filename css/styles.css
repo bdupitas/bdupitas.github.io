@@ -1,163 +1,26 @@
-/*tag selector*/
-body {
-  margin: 0;
+body{
   text-align: center;
 }
 
-h1 {
-  color: white;
-  font-family: 'Neucha', cursive;
-  font-size: 3.75rem;
-  margin-top: 0;
+
+
+/* title page */
+.cover-container{
+  max-width: 50rem;
+}
+.nav-link{
+  padding: 0 5%;
 }
 
-h2 {
-  font-family: 'Neucha', cursive;
-  font-size: 3rem;
-  color:#092532;
+.nav-bar-photo{
+  width: 64px;
 }
 
-h3 {
-font-family: 'Neucha', cursive;
-  color: #092532;
-  font-size: 2rem;
+.title-subtitle{
+  font-size: 14px;
+  color: grey;
 }
 
-hr {
-  border-style: dotted none none none;
-  border-width: 10px;
-  width: 5%;
-  color:#092532;
-  margin: 100px auto;
-}
-
-a{
-  text-decoration: none;
-}
-
-a:hover{
-  color:red;
-}
-
-p {
-  font-family: 'Neucha', cursive;
-  font-size: 1.5rem;
-  line-height: 2;
-}
-
-/*containers selector*/
-.top-container {
-  background-color: #00adb5;
-  padding-top: 5%;
-  position: relative;
-}
-
-.middle-container {
-  background-color: #89c9b8;
-}
-
-.bottom-container {
-  background-color: #092532;
-  padding: 50px;
-}
-
-.name-plate {
-  position:relative;
-  top: 150px;
-  line-height: 1.5;
-  margin-bottom: 100px;
-}
-.intro{
-  width: 30%;
-  margin:auto;
-}
-.skill-row {
-  margin: 100px auto 100px auto;
-}
-
-.subtitle {
-  color: white;
-  font-size: 2rem;
-  font-weight: normal;
-}
-
-/* picture selectors */
-.programming-photo {
-  clear: right;
-  float: left;
-  padding-right: 30px;
-  width: 25%;
-}
-
-.people-photo {
-  float: right;
-  padding-left: 30px;
-  width: 25%;
-}
-
-.profile-photo {
-  height: 250px;
-  margin-top: 40px;
-  width: 250px;
-}
-
-.cloud-top {
-  position: absolute;
-  right: 30%;
-  top: 10%;
-}
-
-.cloud-bottom {
-  position: absolute;
-  top: 300px;
-}
-
-.skills {
-  margin: 0 auto;
-  text-align: left;
-  width: 50%;
-}
-
-.middle-cont-title {
-  text-align: center;
-}
-
-.footer-link {
-  color: white;
-  font-family: 'Neucha', cursive;
-  font-size: 1.5rem;
-  padding: 0 30px 0 30px;
-}
-
-.footer-copyright {
-  color: white;
-  font-size: 16px;
-}
-
-.contact-me {
-  padding-bottom: 100px;
-}
-
-.myButton {
-  margin-top: 50px;
-  background-color: #44c767;
-  border-radius: 10px;
-  border: 1px solid #18ab29;
-  display: inline-block;
-  cursor: pointer;
-  color: #092532;
-  font-family: 'Neucha', cursive;
-  font-size: 17px;
-  padding: 20px 53px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
-}
-
-.myButton:hover {
-  background-color: #5cbf2a;
-}
-
-.myButton:active {
-  position: relative;
-  top: 1px;
+.name-card{
+border-bottom:0;
 }
