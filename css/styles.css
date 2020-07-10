@@ -1,26 +1,106 @@
-body{
+body {
+  background-color: #EEEEEE;
   text-align: center;
+  font-family: 'Noticia Text', serif;
+}
+/* container */
+.colored-section{
+  background-color: #FFF;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+.noncolored-section{
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
-
-
-/* title page */
-.cover-container{
-  max-width: 50rem;
+/* section */
+.section-title{
+text-align: left;
 }
-.nav-link{
+
+/* navigation-bar */
+.cover-container {
+  max-width: 65rem;
+}
+
+.nav-link {
   padding: 0 5%;
 }
 
-.nav-bar-photo{
+.nav-bar-photo {
   width: 64px;
 }
 
-.title-subtitle{
-  font-size: 14px;
+.title-subtitle {
   color: grey;
+  font-size: 14px;
+
 }
 
-.name-card{
-border-bottom:0;
+.name-card {
+  text-align: left;
+}
+
+/* introduction section */
+#introduction {}
+
+.title-box {
+  position: relative;
+  line-height: 1.5;
+  padding: 7% 13%;
+}
+
+.greeting {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 5rem;
+}
+
+.greeting-subtitle {
+  font-family: 'Noticia Text', serif;
+  font-size: 2rem;
+}
+
+.title-name {
+  font-size: 4rem;
+}
+
+.intro-header{
+text-align: left;
+}
+
+/* about talk */
+.about-container{
+  padding: 7% 15%;
+}
+/* skills-section */
+#skills {
+  position: relative;
+}
+
+.skills-list {
+  width: 10rem;
+
+}
+
+/* media queries */
+@media(max-width: 800px) {
+  .greeting{
+    font-size: 5rem;
+  }
+
+  .title-box {
+    font-size: 2rem;
+  }
+
+  .title-subtitle{
+    text-align: center;
+  }
+  .intro-header{
+    font-size: 2rem;
+  }
+
+  .section-title{
+    text-align: center;
+  }
 }
