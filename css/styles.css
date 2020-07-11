@@ -204,4 +204,16 @@ color 5: #000000
   .links a{
     font-size: 2rem;
   }
+
+  .nav-bar-photo {
+    width: 128px;
+
+  }
+
+  .title-name{
+    font-size: 2rem;
+  }
+  .title-subtitle{
+    font-size: 1.5rem;
+  }
 }
