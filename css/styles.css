@@ -20,11 +20,19 @@ color 5: #000000
   max-width: 65rem;
 }
 
+.alt-colored-section{
+  background-color: #011C27;
+  color: white;
+  margin: 0 auto;
+  max-width: 65rem;
+}
+
 .noncolored-section {
   background-color: #FFF;
   margin: 0 auto;
   max-width: 65rem;
 }
+
 
 /* section */
 .section-title {
