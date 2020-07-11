@@ -21,7 +21,7 @@ color 5: #000000
 }
 
 .title-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .alt-colored-section{
@@ -149,6 +149,11 @@ color 5: #000000
 .list-group-item {
   background-color: inherit;
   border: 0;
+}
+
+/* contact-me */
+.contact-title{
+  text-align: center;
 }
 
 /* footer */
