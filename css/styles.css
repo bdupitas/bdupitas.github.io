@@ -8,23 +8,20 @@ body {
 /*
 color 1: #FFFFFF
 color 2: #EEEEEE
-color 3: #846A6A
+color 3: #85A7B6
 color 4: #011C27
 color 5: #000000
 */
 /* container */
 .colored-section {
-  background-color: #846A6A;
+  background-color: #85A7B6;
   color: white;
   margin: 0 auto;
   max-width: 65rem;
 }
 
-.title-name {
-  font-size: 1.5rem;
-}
 
-.alt-colored-section{
+.alt-colored-section {
   background-color: #011C27;
   color: white;
   margin: 0 auto;
@@ -36,7 +33,6 @@ color 5: #000000
   margin: 0 auto;
   max-width: 65rem;
 }
-
 
 /* section */
 .section-title {
@@ -54,14 +50,17 @@ color 5: #000000
   padding: 0 5%;
 }
 
+.nav-name {
+  font-size: 1.5rem;
+}
+.nav-subtitle {
+  color: grey;
+  font-size: 14px;
+}
 .nav-bar-photo {
   width: 64px;
 }
 
-.title-subtitle {
-  color: grey;
-  font-size: 14px;
-}
 
 .name-card {
   text-align: left;
@@ -85,7 +84,6 @@ color 5: #000000
   font-family: 'Noticia Text', serif;
   font-size: 2rem;
 }
-
 
 .intro-header {
   text-align: left;
@@ -152,81 +150,65 @@ color 5: #000000
 }
 
 /* contact-me */
-.contact-title{
+.contact-title {
   text-align: center;
 }
 
 /* footer */
-
-#footer{
+#footer {
   padding: 3% 10% 3%;
 }
 
-.links a{
+.links a {
   text-decoration: none;
   color: #011C27;
   font-size: 1.5rem;
 }
 
-#footer p{
+#footer p {
   color: grey;
   font-size: 14px;
-  padding-top:1%;
+  padding-top: 1%;
 }
 
-.btn-mobile{
+.btn-mobile {
   font-size: 1rem;
 }
-/*
-@media(min-width: 800px) {
-  .greeting {
-    font-size: 5rem;
-  }
 
-  .title-box {
-    font-size: 2rem;
-  }
-  .title-name {
-    font-size: 4rem;
-  }
-
-  .title-subtitle {
-    text-align: center;
-  }
-
-   .intro-header{
-    font-size: 2rem;
-  }
+@media (max-width: 900px) {
   .section-title {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
+  }
+  .name-card{
+    text-align: center;
   }
 
-  p{
-    font-size: 2.5rem;
+ .nav-name{
+     font-size: 1rem;
+ }
+
+  .nav-bar-photo {
+    width: 44px;
+  }
+  .skills-row {
+  padding: 0;
+  margin: 0 auto;
   }
 
   .col-skills{
-   font-size: 1.5rem;
+    max-width: 100%;
+    flex-basis: auto;
   }
 
-  .btn-mobile{
-    font-size: 2rem;
-  }
 
-  .links a{
-    font-size: 2rem;
-  }
+  /* .skill-item {
+    border-radius: .25rem;
+    font-weight: 700;
+    padding: .25em .4em;
+    text-align: center;
+    vertical-align: baseline;
+    background-color: #343a40;
+  } */
 
-  .nav-bar-photo {
-    width: 128px;
-
-  }
-
-  .title-name{
-    font-size: 2rem;
-  }
-  .title-subtitle{
-    font-size: 1.5rem;
-  }
-} */
+}
