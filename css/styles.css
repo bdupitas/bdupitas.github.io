@@ -1,9 +1,3 @@
-body {
-  background-color: #EEEEEE;
-  font-family: 'Noticia Text', serif;
-  text-align: center;
-}
-
 /* pallette */
 /*
 color 1: #FFFFFF
@@ -12,84 +6,41 @@ color 3: #85A7B6
 color 4: #011C27
 color 5: #000000
 */
+
+body {
+  background-color: #EEEEEE;
+  font-family: 'Noticia Text', serif;
+  text-align: center;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
 /* container */
 .colored-section {
   background-color: #85A7B6;
   color: white;
-  margin: 0 auto;
-  max-width: 65rem;
+
 }
 
 
 .alt-colored-section {
   background-color: #011C27;
   color: white;
-  margin: 0 auto;
-  max-width: 65rem;
+
 }
 
 .noncolored-section {
   background-color: #FFF;
-  margin: 0 auto;
-  max-width: 65rem;
+
 }
 
-/* section */
+
+/* section  CSS*/
 .section-title {
   text-align: left;
   font-size: 2rem;
 }
 
-/* navigation-bar */
-.cover-container {
-  margin: 0 auto;
-  max-width: 65rem;
-}
-
-.nav-link {
-  padding: 0 5%;
-}
-
-.nav-name {
-  font-size: 1.5rem;
-}
-.nav-subtitle {
-  color: grey;
-  font-size: 14px;
-}
-.nav-bar-photo {
-  width: 64px;
-}
-
-
-.name-card {
-  text-align: left;
-}
-
-/* introduction section */
-#introduction {}
-
-.title-box {
-  line-height: 1.5;
-  padding: 7% 13%;
-  position: relative;
-}
-
-.greeting {
-  font-family: 'Patrick Hand', cursive;
-  font-size: 5rem;
-}
-
-.greeting-subtitle {
-  font-family: 'Noticia Text', serif;
-  font-size: 2rem;
-}
-
-.intro-header {
-  text-align: left;
-}
-
-/* about talk */
 .section-container {
   padding: 7% 15%;
 }
@@ -98,82 +49,93 @@ color 5: #000000
   padding: 7%;
 }
 
-/* skills-section */
-#skills {
-  position: relative;
+/* navigation-bar */
+
+.nav-link {
+  padding: 0 5%;
 }
 
-.list-card {
-  background-color: red;
-  display: inline-block;
-}
 
-.skill-item {
-  border-radius: .25rem;
-  font-weight: 700;
-  padding: .25em .4em;
-  text-align: center;
-  vertical-align: baseline;
-  background-color: #343a40;
-}
+ /* Nav bar photo and name */
+ .nav-bar-photo {
+   width: 64px;
+ }
 
-.skills-list {
-  color: black;
-  margin: 0 auto;
-  width: 10rem;
-}
+ .name-card {
+   text-align: left;
+ }
 
-.col-skills {
-  font-size: 1.1rem;
-  margin: 1%;
-  max-width: 20%;
-}
-
-.skills-row {
-  padding-left: 5%;
-}
-
-.skill-col {
-  flex-grow: 0;
-  flex-wrap: wrap-reverse;
-}
-
-.list-size {
-  display: inline-inline-block;
-  font-size: 1.5rem;
-  margin: auto;
-}
-
-.list-group-item {
-  background-color: inherit;
-  border: 0;
-}
-
-/* contact-me */
-.contact-title {
-  text-align: center;
-}
-
-/* footer */
-#footer {
-  padding: 3% 10% 3%;
-}
-
-.links a {
-  text-decoration: none;
-  color: #011C27;
+.nav-name {
   font-size: 1.5rem;
 }
 
-#footer p {
+.nav-subtitle {
   color: grey;
   font-size: 14px;
-  padding-top: 1%;
 }
 
-.btn-mobile {
-  font-size: 1rem;
-}
+/* introduction section */
+#introduction {}
+
+  .title-box {
+    line-height: 1.5;
+    padding: 7% 13%;
+    position: relative;
+  }
+
+  .greeting {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 5rem;
+  }
+
+  .greeting-subtitle {
+    font-family: 'Noticia Text', serif;
+    font-size: 2rem;
+  }
+  /* ***about*** */
+
+  /* skills-section */
+  #skills {
+    position: relative;
+  }
+
+  .skill-item {
+    border-radius: .25rem;
+    font-weight: 700;
+    padding: .25em .4em;
+    text-align: center;
+    vertical-align: baseline;
+    background-color: #343a40;
+  }
+
+  .skill-col {
+    font-size: 1.1rem;
+    margin: 1%;
+    max-width: 20%;
+  }
+
+  .skill-row {
+    padding-left: 5%;
+  }
+
+  /* contact-me */
+
+  /* footer */
+  #footer {
+    padding: 3% 10% 3%;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #011C27;
+    font-size: 1.5rem;
+  }
+
+  #footer p {
+    color: grey;
+    font-size: 14px;
+    padding-top: 1%;
+  }
 
 @media (max-width: 900px) {
   .section-title {
@@ -191,24 +153,14 @@ color 5: #000000
   .nav-bar-photo {
     width: 44px;
   }
-  .skills-row {
+  .skill-row {
   padding: 0;
   margin: 0 auto;
   }
 
-  .col-skills{
+  .skill-col{
     max-width: 100%;
     flex-basis: auto;
   }
-
-
-  /* .skill-item {
-    border-radius: .25rem;
-    font-weight: 700;
-    padding: .25em .4em;
-    text-align: center;
-    vertical-align: baseline;
-    background-color: #343a40;
-  } */
 
 }
