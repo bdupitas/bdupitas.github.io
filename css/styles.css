@@ -15,6 +15,8 @@ body {
   margin: 0 auto;
 }
 
+
+
 /* container */
 .colored-section {
   background-color: #85A7B6;
@@ -45,12 +47,11 @@ body {
   padding: 7% 15%;
 }
 
-.section-alt-container {
-  padding: 7%;
-}
-
 /* navigation-bar */
 
+.navigationBar{
+  max-width: 80rem;
+}
 .nav-link {
   padding: 0 5%;
 }
