@@ -1,167 +1,84 @@
-/* pallette */
-/*
-color 1: #FFFFFF
-color 2: #EEEEEE
-color 3: #85A7B6
-color 4: #011C27
-color 5: #000000
-*/
+/* global selectors */
+body{
+  z-index: 1;
+  background-color: #d6c8c8;
+}
 
-body {
-  background-color: #EEEEEE;
-  font-family: 'Noticia Text', serif;
-  text-align: center;
-  max-width: 65rem;
+
+/* navbar selector */
+
+/* bgheader */
+
+.bg-header{
+  position: absolute;
+  z-index: 0;
+  height: 300px;
+  width: 100%;
+}
+
+/* main body */
+.resume-body{
+  top: 100px;
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  background-color: white;
+  max-width: 1228px;
   margin: 0 auto;
 }
+/* resume head */
+.resume-head{
 
+}
+.profile-photo {
+  max-width: 377px;
+}
+.intro-card{
+  padding-top:18px;
+  padding-left:18px;
+}
+.skillbox{
+  padding:3px;
+  color: #495469;
+  margin-right: 10px;
+  margin-bottom: 10px; 
+  font-size: 13px;
+  border: 1px solid #dfe3e9;
+  border-radius: 12px;
 
+}
+.top-name{
+  
+  letter-spacing: .2px;
+  font-size: 34px;
+}
 
-/* container */
-.colored-section {
-  background-color: #85A7B6;
-  color: white;
-
+.top-skill{
+  height: 330px;
 }
 
 
-.alt-colored-section {
-  background-color: #011C27;
-  color: white;
-
-}
-
-.noncolored-section {
-  background-color: #FFF;
-
-}
-
-
-/* section  CSS*/
-.section-title {
-  text-align: left;
-  font-size: 2rem;
-}
-
-.section-container {
-  padding: 7% 15%;
-}
-
-/* navigation-bar */
-
-.navigationBar{
-  max-width: 80rem;
-}
-.nav-link {
-  padding: 0 5%;
-}
-
-
- /* Nav bar photo and name */
- .nav-bar-photo {
-   width: 64px;
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body{
+    background-color: azure;
+  }
  }
 
- .name-card {
-   text-align: left;
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  body{
+    background-color: red ;
+  }
+  
  }
 
-.nav-name {
-  font-size: 1.5rem;
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+   body{
+  background-color:blue ;
 }
 
-.nav-subtitle {
-  color: grey;
-  font-size: 14px;
-}
 
-/* introduction section */
-#introduction {}
-
-  .title-box {
-    line-height: 1.5;
-    padding: 7% 13%;
-    position: relative;
-  }
-
-  .greeting {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 5rem;
-  }
-
-  .greeting-subtitle {
-    font-family: 'Noticia Text', serif;
-    font-size: 2rem;
-  }
-  /* ***about*** */
-
-  /* skills-section */
-  #skills {
-    position: relative;
-  }
-
-  .skill-item {
-    border-radius: .25rem;
-    font-weight: 700;
-    padding: .25em .4em;
-    text-align: center;
-    vertical-align: baseline;
-    background-color: #343a40;
-  }
-
-  .skill-col {
-    font-size: 1.1rem;
-    margin: 1%;
-    max-width: 20%;
-  }
-
-  .skill-row {
-    padding-left: 5%;
-  }
-
-  /* contact-me */
-
-  /* footer */
-  #footer {
-    padding: 3% 10% 3%;
-  }
-
-  .links a {
-    text-decoration: none;
-    color: #011C27;
-    font-size: 1.5rem;
-  }
-
-  #footer p {
-    color: grey;
-    font-size: 14px;
-    padding-top: 1%;
-  }
-
-@media (max-width: 900px) {
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-  }
-  .name-card{
-    text-align: center;
-  }
-
- .nav-name{
-     font-size: 1rem;
- }
-
-  .nav-bar-photo {
-    width: 44px;
-  }
-  .skill-row {
-  padding: 0;
-  margin: 0 auto;
-  }
-
-  .skill-col{
-    max-width: 100%;
-    flex-basis: auto;
-  }
-
-}
+  background-color: azure;
+} 
