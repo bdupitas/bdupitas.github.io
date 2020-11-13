@@ -2,10 +2,42 @@
 body {
   z-index: 1;
   background-color: #d6c8c8;
+
+
 }
 
+.page-width {
+  width: 1228px;
+  margin: 0 auto;
+
+}
 
 /* navbar selector */
+.nav-padding {
+  padding: 5px 18%;
+}
+
+.animate-cursor {
+  width: 10px;
+  height: 1rem;
+  background-color: orange;
+  border-radius: 1px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 /* bgheader */
 
@@ -23,7 +55,6 @@ body {
   z-index: 2;
   padding: 24px;
   background-color: white;
-  max-width: 1228px;
   margin: 0 auto;
 }
 
@@ -56,37 +87,65 @@ body {
   font-size: 34px;
 }
 
+.current-title {}
+
 .top-skill {
   height: 330px;
 }
 
 
 /* Small devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   body {
-    background-color: azure;
+    background-color: purple;
+  }
+
+  .page-width {
+    max-width: 600px;
+  }
+
+  .profile-photo {
+    max-width: 180px;
+  }
+
+  .top-skill {
+    height: 200px;
+  }
+
+  .top-name {
+    letter-spacing: .2px;
+    font-size: 24px;
+  }
+
+  .current-title {
+    font-size: 14px;
   }
 }
 
+
 /* Medium devices (desktops, 992px and up) */
-@media (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   body {
     background-color: red;
   }
 
-  .resume-body {
-    top: 100px;
-    padding: 24px;
-    background-color: white;
-    max-width: 800px;
-    margin: 0 auto;
+  .nav-padding {
+    padding: 5px 12%;
+
   }
+
+  .page-width {
+    max-width: 800px;
+  }
+
   .profile-photo {
     max-width: 250px;
   }
+
   .top-skill {
     height: 200px;
   }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -94,7 +153,8 @@ body {
   body {
     background-color: blue;
   }
-  .resume-body{
+
+  .page-width {
     max-width: 1228px;
   }
 }
