@@ -1,5 +1,5 @@
 /* global selectors */
-body{
+body {
   z-index: 1;
   background-color: #d6c8c8;
 }
@@ -9,7 +9,7 @@ body{
 
 /* bgheader */
 
-.bg-header{
+.bg-header {
   position: absolute;
   z-index: 0;
   height: 300px;
@@ -17,7 +17,7 @@ body{
 }
 
 /* main body */
-.resume-body{
+.resume-body {
   top: 100px;
   position: relative;
   z-index: 2;
@@ -26,59 +26,75 @@ body{
   max-width: 1228px;
   margin: 0 auto;
 }
-/* resume head */
-.resume-head{
 
-}
+/* resume head */
+.resume-head {}
+
 .profile-photo {
   max-width: 377px;
 }
-.intro-card{
-  padding-top:18px;
-  padding-left:18px;
+
+.intro-card {
+  padding-top: 18px;
+  padding-left: 18px;
 }
-.skillbox{
-  padding:3px;
+
+.skillbox {
+  padding: 3px;
   color: #495469;
   margin-right: 10px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   font-size: 13px;
   border: 1px solid #dfe3e9;
   border-radius: 12px;
 
 }
-.top-name{
-  
+
+.top-name {
+
   letter-spacing: .2px;
   font-size: 34px;
 }
 
-.top-skill{
+.top-skill {
   height: 330px;
 }
 
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  body{
+@media (max-width: 768px) {
+  body {
     background-color: azure;
   }
- }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  body{
-    background-color: red ;
-  }
-  
- }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-   body{
-  background-color:blue ;
 }
 
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 1199px) {
+  body {
+    background-color: red;
+  }
 
-  background-color: azure;
-} 
+  .resume-body {
+    top: 100px;
+    padding: 24px;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .profile-photo {
+    max-width: 250px;
+  }
+  .top-skill {
+    height: 200px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: blue;
+  }
+  .resume-body{
+    max-width: 1228px;
+  }
+}
