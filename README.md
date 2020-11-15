@@ -1,4 +1,4 @@
-Welcome to the read-me, I am brandon dupitas an asipiring developer. Here is the source code for my personal website which I have designed and styled myself. 
+Welcome to the read-me! I am Brandon, an asipiring developer. Here is the source code for my personal website which I have designed and styled myself. My inspiration comes from fellow developers and their commitment to their own personal websites.
 
 <hr>
 <h1>My journey --- timeline</h1>
