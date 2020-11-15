@@ -1,9 +1,7 @@
 /* global selectors */
 body {
   z-index: 1;
-  background-color: #d6c8c8;
-
-
+  background-color: #f7f7f8;
 }
 
 .page-width {
@@ -72,12 +70,22 @@ body {
 
 .skillbox {
   padding: 3px;
-  color: #495469;
+  color: black;
+  background-color: ;
   margin-right: 10px;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid #dfe3e9;
   border-radius: 12px;
+  opacity: 0.5;
+
+}
+
+.skillbox:hover {
+  opacity: 1;
+  background-color: blue;
+  color: white;
+
 
 }
 
@@ -93,6 +101,52 @@ body {
   height: 330px;
 }
 
+/* resume details */
+.resume-detail-title {
+  padding-bottom: 20px;
+}
+
+.project-list {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.experience-list {
+  list-style-type: none;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+}
+
+/* employment */
+.employment-details {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+.employment-item{
+  padding-bottom: 10px;
+}
+
+.employment-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #8f96a3;
+}
+
+.employment-item::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 25px;
+  bottom: 0;
+  border-left: 1px dashed #8f96a3;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -151,7 +205,7 @@ body {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   body {
-    background-color: blue;
+    /* background-color: blue; */
   }
 
   .page-width {
