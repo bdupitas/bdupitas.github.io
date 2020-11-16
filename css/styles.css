@@ -71,7 +71,7 @@ body {
 .skillbox {
   padding: 3px;
   color: black;
-  background-color: ;
+  /* background-color:  ; */
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 15px;
@@ -124,29 +124,37 @@ body {
   list-style-type: none;
   padding-inline-start: 0px;
 }
+
 .employment-item{
-  padding-bottom: 10px;
+  clear: left;
+  margin: 0 0 20px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 16px;
+  padding-left: 36px;
+  margin-bottom: 16px;
 }
 
 .employment-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #8f96a3;
+content:"";
+position: absolute;
+left: 0;
+top: 7px;
+width: 9px;
+height: 9px;
+border-radius: 50%;
+background: #8f96a3;
 }
 
 .employment-item::after{
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 25px;
-  bottom: 0;
-  border-left: 1px dashed #8f96a3;
+content:"";
+position: absolute;
+left: 4px;
+top: 25px;
+bottom: 0;
+border-left: 1px dashed #8f96a3;
 }
+
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
