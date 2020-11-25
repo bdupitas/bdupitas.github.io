@@ -1,7 +1,7 @@
 /* global selectors */
 body {
   z-index: 1;
-  background-color: #f7f7f8;
+  background-color: #39311d;
 }
 
 .page-width {
@@ -48,7 +48,7 @@ body {
 
 /* main body */
 .resume-body {
-  top: 100px;
+  top: 75px;
   position: relative;
   z-index: 2;
   padding: 24px;
@@ -153,6 +153,11 @@ left: 4px;
 top: 25px;
 bottom: 0;
 border-left: 1px dashed #8f96a3;
+}
+
+.contact-info{
+  padding-top: 5%;
+  text-align: center;
 }
 
 
