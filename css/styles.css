@@ -1,7 +1,13 @@
+/* font-family: 'Castoro', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif; */
+ 
+
 /* global selectors */
 body {
   z-index: 1;
   background-color: #39311d;
+  
 }
 
 .page-width {
@@ -13,6 +19,10 @@ body {
 /* navbar selector */
 .nav-padding {
   padding: 5px 18%;
+}
+.brand-text{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
 }
 
 .animate-cursor {
@@ -43,6 +53,10 @@ body {
 }
 .subtitle{
   color: #7e7474;
+}
+
+.section-title{
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* bgheader */
@@ -97,7 +111,7 @@ body {
 }
 
 .top-name {
-
+  font-family: 'Castoro', serif;
   letter-spacing: .2px;
   font-size: 34px;
 }
