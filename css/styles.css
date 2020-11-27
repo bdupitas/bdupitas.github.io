@@ -1,167 +1,274 @@
-/* pallette */
-/*
-color 1: #FFFFFF
-color 2: #EEEEEE
-color 3: #85A7B6
-color 4: #011C27
-color 5: #000000
-*/
+/* font-family: 'Castoro', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif; */
+ 
 
+/* global selectors */
 body {
-  background-color: #EEEEEE;
-  font-family: 'Noticia Text', serif;
-  text-align: center;
-  max-width: 65rem;
+  z-index: 1;
+  background-color: #39311d;
+  
+}
+
+.page-width {
+  width: 1228px;
+  margin: 0 auto;
+
+}
+
+/* navbar selector */
+.nav-padding {
+  padding: 5px 18%;
+}
+.brand-text{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+.animate-cursor {
+  width: 10px;
+  height: 1rem;
+  background-color: orange;
+  border-radius: 1px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* global classes */
+.title{
+  margin-bottom: 0;
+}
+.subtitle{
+  color: #7e7474;
+}
+
+.section-title{
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* bgheader */
+
+.bg-header {
+  position: absolute;
+  z-index: 0;
+  height: 300px;
+  width: 100%;
+}
+
+/* main body */
+.resume-body {
+  top: 75px;
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  background-color: white;
   margin: 0 auto;
 }
 
+/* resume head */
+
+.profile-photo {
+  max-width: 377px;
+}
+
+.intro-card {
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+.skillbox {
+  padding: 4px;
+  color: black;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  opacity: 0.5;
 
 
-/* container */
-.colored-section {
-  background-color: #85A7B6;
+}
+
+.skillbox:hover {
+  opacity: .5;
+  background-color: blue;
   color: white;
+  text-decoration: none;
+ 
+}
 
+.top-name {
+  font-family: 'Castoro', serif;
+  letter-spacing: .2px;
+  font-size: 34px;
 }
 
 
-.alt-colored-section {
-  background-color: #011C27;
-  color: white;
-
+.top-skill {
+  height: 330px;
 }
 
-.noncolored-section {
-  background-color: #FFF;
+/* resume details */
+.resume-detail-title {
+  padding-bottom: 20px;
+}
 
+.project-list {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.experience-list {
+  list-style-type: none;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+}
+/* projects */
+
+.projects-portfolio li{
+  list-style: none;
+  padding-bottom: 25px;
+}
+/* employment */
+.employment-details {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+.employment-item h4{
+  margin-bottom: 0;
+}
+.employment-respon-list li {
+  list-style-type: square;
+ 
+}
+
+.employment-subtitle{
+  color: #7e7474;
+}
+
+.employment-respon{
+  margin-bottom: 0;
+  text-decoration: underline
+}
+
+.job-tags {
+  margin-top: 15px;
+}
+
+.employment-item{
+  clear: left;
+  margin: 0 0 20px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 16px;
+  padding-left: 36px;
+  margin-bottom: 16px;
+}
+
+.employment-item::before {
+content:"";
+position: absolute;
+left: 0;
+top: 7px;
+width: 9px;
+height: 9px;
+border-radius: 50%;
+background: #8f96a3;
+}
+
+.employment-item::after{
+content:"";
+position: absolute;
+left: 4px;
+top: 25px;
+bottom: 0;
+border-left: 1px dashed #8f96a3;
+}
+
+.education-ins{
+  padding-left: 55px;
+}
+
+.contact-info{
+ font-size: 14px;
+ color: gray;
 }
 
 
-/* section  CSS*/
-.section-title {
-  text-align: left;
-  font-size: 2rem;
-}
-
-.section-container {
-  padding: 7% 15%;
-}
-
-/* navigation-bar */
-
-.navigationBar{
-  max-width: 80rem;
-}
-.nav-link {
-  padding: 0 5%;
-}
-
-
- /* Nav bar photo and name */
- .nav-bar-photo {
-   width: 64px;
- }
-
- .name-card {
-   text-align: left;
- }
-
-.nav-name {
-  font-size: 1.5rem;
-}
-
-.nav-subtitle {
-  color: grey;
-  font-size: 14px;
-}
-
-/* introduction section */
-#introduction {}
-
-  .title-box {
-    line-height: 1.5;
-    padding: 7% 13%;
-    position: relative;
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: purple;
   }
 
-  .greeting {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 5rem;
+  .page-width {
+    max-width: 800px;
   }
 
-  .greeting-subtitle {
-    font-family: 'Noticia Text', serif;
-    font-size: 2rem;
-  }
-  /* ***about*** */
-
-  /* skills-section */
-  #skills {
-    position: relative;
+  .profile-photo {
+    max-width: 180px;
   }
 
-  .skill-item {
-    border-radius: .25rem;
-    font-weight: 700;
-    padding: .25em .4em;
-    text-align: center;
-    vertical-align: baseline;
-    background-color: #343a40;
+  .top-skill {
+    height: 200px;
   }
 
-  .skill-col {
-    font-size: 1.1rem;
-    margin: 1%;
-    max-width: 20%;
+  .top-name {
+    letter-spacing: .2px;
+    font-size: 24px;
   }
 
-  .skill-row {
-    padding-left: 5%;
-  }
-
-  /* contact-me */
-
-  /* footer */
-  #footer {
-    padding: 3% 10% 3%;
-  }
-
-  .links a {
-    text-decoration: none;
-    color: #011C27;
-    font-size: 1.5rem;
-  }
-
-  #footer p {
-    color: grey;
+  .current-title {
     font-size: 14px;
-    padding-top: 1%;
+  }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background-color: red;
   }
 
-@media (max-width: 900px) {
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-  }
-  .name-card{
-    text-align: center;
+  .nav-padding {
+    padding: 5px 12%;
+
   }
 
- .nav-name{
-     font-size: 1rem;
- }
-
-  .nav-bar-photo {
-    width: 44px;
-  }
-  .skill-row {
-  padding: 0;
-  margin: 0 auto;
+  .page-width {
+    max-width: 800px;
   }
 
-  .skill-col{
-    max-width: 100%;
-    flex-basis: auto;
+  .profile-photo {
+    max-width: 250px;
   }
 
+  .top-skill {
+    height: 200px;
+  }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+  .page-width {
+    max-width: 1228px;
+  }
 }
