@@ -117,7 +117,7 @@ body {
 }
 
 
-.top-skill {
+.about-card {
   height: 330px;
 }
 
@@ -210,8 +210,23 @@ border-left: 1px dashed #8f96a3;
 }
 
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  body{
+    background-color: orange 
+  }
+
+  
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+ body {
+   background-color: teal;
+ }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px)  {
   body {
     background-color: purple;
   }
@@ -233,7 +248,7 @@ border-left: 1px dashed #8f96a3;
     font-size: 24px;
   }
 
-  .current-title {
+  .top-subtitle {
     font-size: 14px;
   }
 }
