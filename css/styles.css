@@ -81,7 +81,8 @@ body {
 /* resume head */
 
 .profile-photo {
-  max-width: 377px;
+  max-width: 300px; 
+  margin: 0 auto;
 }
 
 .intro-card {
