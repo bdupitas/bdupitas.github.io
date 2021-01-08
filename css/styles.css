@@ -1,17 +1,22 @@
 /* font-family: 'Castoro', serif;
 font-family: 'Roboto Mono', monospace;
 font-family: 'Ubuntu', sans-serif; */
- 
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /* global selectors */
 body {
   z-index: 1;
   background-color: #39311d;
-  
+
 }
 
 .page-width {
-  width: 65%;
+
   margin: 0 auto;
 
 }
@@ -20,7 +25,8 @@ body {
 .nav-padding {
   padding: 5px 18%;
 }
-.brand-text{
+
+.brand-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
@@ -48,14 +54,15 @@ body {
 }
 
 /* global classes */
-.title{
+.title {
   margin-bottom: 0;
 }
-.subtitle{
+
+.subtitle {
   color: #7e7474;
 }
 
-.section-title{
+.section-title {
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -72,7 +79,7 @@ body {
 /* resume head */
 
 .profile-photo {
-  max-width: 100%; 
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -90,8 +97,6 @@ body {
   border: 1px solid gray;
   border-radius: 12px;
   opacity: 0.5;
-
-
 }
 
 .skillbox:hover {
@@ -99,7 +104,7 @@ body {
   background-color: blue;
   color: white;
   text-decoration: none;
- 
+
 }
 
 .top-name {
@@ -130,30 +135,34 @@ body {
 .experience-list li {
   margin-bottom: 10px;
 }
+
 /* projects */
 
-.projects-portfolio li{
+.projects-portfolio li {
   list-style: none;
   padding-bottom: 25px;
 }
+
 /* employment */
 .employment-details {
   list-style-type: none;
   padding-inline-start: 0px;
 }
-.employment-item h4{
+
+.employment-item h4 {
   margin-bottom: 0;
 }
+
 .employment-respon-list li {
   list-style-type: square;
- 
+
 }
 
-.employment-subtitle{
+.employment-subtitle {
   color: #7e7474;
 }
 
-.employment-respon{
+.employment-respon {
   margin-bottom: 0;
   text-decoration: underline
 }
@@ -162,7 +171,7 @@ body {
   margin-top: 15px;
 }
 
-.employment-item{
+.employment-item {
   clear: left;
   margin: 0 0 20px;
   overflow: hidden;
@@ -173,78 +182,108 @@ body {
 }
 
 .employment-item::before {
-content:"";
-position: absolute;
-left: 0;
-top: 7px;
-width: 9px;
-height: 9px;
-border-radius: 50%;
-background: #8f96a3;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #8f96a3;
 }
 
-.employment-item::after{
-content:"";
-position: absolute;
-left: 4px;
-top: 25px;
-bottom: 0;
-border-left: 1px dashed #8f96a3;
+.employment-item::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 25px;
+  bottom: 0;
+  border-left: 1px dashed #8f96a3;
 }
 
-.education-ins{
+.education-ins {
   padding-left: 55px;
 }
 
-.contact-info{
- font-size: 14px;
- color: gray;
+.contact-info {
+  font-size: 14px;
+  color: gray;
 }
 
 
 /* // Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-  body{
-    background-color: #ffa500 
+@media (max-width: 575.98px) {
+
+  .mobile-size{
+    padding: 0;
   }
-  .page-width{
-    width: 100%;
+  .experience-list{
+    padding:0;
   }
   .nav-padding {
-    padding: 5px 12%;
-  }
-  .nav-link {
-    font-size: 2rem;
+    padding: 5px 4%;
 }
-.brand-text{
-font-size: 2rem;;
+.skillbox {
+  font-size:13px;
+  padding: 3px;
 }
-.resume-body{
-  top: 100px;
+h3{
+  font-size:18px;
 }
-.employment-item{
-  width: 0;
-  overflow:visible;
-  list-style-type: none;
+
+h4{
+  font-size: 16px;
+  text-decoration: underline;
 }
-.navbar-toggler {
-  padding: .5rem 1.5rem;
-  font-size: 2rem;
-  
- }
+
+.top-name{
+  font-size: 24px;
+}
+
+.profile-photo{
+  width: 103px;
+  padding-top: 20px;
+}
+
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
- body {
-   background-color: teal;
- }
+  body {
+    background-color: teal;
+  }
+  
+h3{
+  font-size:18px;
+}
+
+h4{
+  font-size: 16px;
+  text-decoration: underline;
+}
+.nav-padding {
+    padding: 5px 8%;
+}
+  .page-width {
+    max-width: 750px;
+  }
+
+  .mobile-size{
+    padding: 0;
+  }
+
+  .resume-body {
+   padding:12px;
+  }
+ 
+  .skillbox {
+    font-size:13px;
+    padding: 3px;
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px)  {
-  body {
-    background-color: purple;
-  }
+@media (min-width: 768px) and (max-width: 991.98px) {
+
 
   .page-width {
     max-width: 800px;
@@ -271,17 +310,14 @@ font-size: 2rem;;
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  body {
-    background-color: red;
-  }
+
 
   .nav-padding {
     padding: 5px 12%;
-
   }
 
   .page-width {
-    max-width: 800px;
+    max-width: 850px;
   }
 
   .profile-photo {
@@ -296,7 +332,9 @@ font-size: 2rem;;
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  .nav-padding {
+    padding: 5px 18%;
+  }
 
   .page-width {
     max-width: 1228px;
