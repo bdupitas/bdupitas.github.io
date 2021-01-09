@@ -97,6 +97,7 @@ body {
   border: 1px solid gray;
   border-radius: 12px;
   opacity: 0.5;
+  text-align: center;
 }
 
 .skillbox:hover {
@@ -167,10 +168,6 @@ body {
   text-decoration: underline
 }
 
-.job-tags {
-  margin-top: 15px;
-}
-
 .employment-item {
   clear: left;
   margin: 0 0 20px;
@@ -210,10 +207,13 @@ body {
   color: gray;
 }
 
+.contact-text{
+  font-family: 'Castoro', serif;
+}
 
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-
+  
   .mobile-size{
     padding: 0;
   }
@@ -225,7 +225,8 @@ body {
 }
 .skillbox {
   font-size:13px;
-  padding: 3px;
+  padding: 5px;
+ 
 }
 h3{
   font-size:18px;
@@ -244,6 +245,22 @@ h4{
   width: 103px;
   padding-top: 20px;
 }
+
+.employment-item {
+  padding-left: 0;
+  position: static;
+}
+
+.employment-item::after{
+  border-left: 0px dashed #8f96a3;
+}
+
+.mobile-row{
+  padding-top: 20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 
 }
 /* // Small devices (landscape phones, 576px and up) */
@@ -278,6 +295,7 @@ h4{
   .skillbox {
     font-size:13px;
     padding: 3px;
+    
   }
 }
 
