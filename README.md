@@ -6,5 +6,6 @@ https://bdupitas.com
   <li>6 - 10 - 2020: Learned the basics of HTML structuring and implemented a rough looking personal website</li>
   <li>6 - 28 - 2020: Implemented CSS styling </li>
   <li>7 - 10 - 2020: Bootstrap and re-styling of my page, reimagined.</li>
-  <li>11- 10 - 2020: Reimagined web-site, to be more appealing and more information driven.
+  <li>11 - 10 - 2020: Reimagined web-site, to be more appealing and more information driven.</li>
+  <li>01 - 08 - 2021: added responsive elements to my webpage using Bootstrap4 mobile first approach </li>
 </ul>
