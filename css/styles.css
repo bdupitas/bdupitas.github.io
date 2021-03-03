@@ -133,6 +133,10 @@ body {
   margin: 5px 0;
 }
 
+.skillbox--row{
+  margin-left: 0;
+}
+
 .experience-list {
   list-style-type: none;
 }
