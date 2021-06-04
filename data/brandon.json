@@ -1,0 +1,120 @@
+{
+    "first_name": "Brandon",
+    "last_name": "Dupitas",
+    "email": "brandondupitas@gmail.com",
+    "about": "An aspiring developer based in Los Angeles, CA. Former student-nurse turned programmer. Disney fanatic, Theatre Enthusiast, and Master Gardener. I graduate in May 2021!",
+    "coding_skills": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Java",
+        "Python"
+    ],
+    "tools": [
+        "JIRA",
+        "GIT",
+        "Agile Development",
+        "Scrum"
+    ],
+    "Frameworks": [
+        "node.js",
+        "express",
+        "react.js",
+        "MongoDB"
+    ],
+    "environments": [
+        "MacOS",
+        "Linux",
+        "Windows"
+    ],
+    "education": {
+        "school": "California State University, Northridge",
+        "degree": "B.S. Computer Science, May 2021",
+        "Major_GPA": "3.69"
+    },
+    "projects": [
+        {
+            "name": "concert",
+            "date": "August 2020 - Present",
+            "description": "Concert is a web application created to allow students to colaborate and interact with eachother virtually. This web application is created using the MERN stack. Some features of this web applications gives students the power to login and have access to tutors and the ablity to make studyrooms, virtual whiteboards, and chatroom.",
+            "skills": [
+                "react.js",
+                "mongoDB",
+                "node.js",
+                "express"
+            ]
+        },
+        {
+            "name": "Weather Application",
+            "date": "August 2020 - Present",
+            "description": "This is a weather application that allows you to check current conditions based on your zipcode! This web application utilizes React to create components, in addition to Node.js and Express to facilitate API calls from OpenWeatherMapsAPI as well as bing maps.",
+            "skills": [
+                "react.js",
+                "mongoDB",
+                "node.js",
+                "express"
+            ]
+        },
+        {
+            "name": "bdupitas.github.io",
+            "date": "June 2020 - Present",
+            "description": "This is my personal webpage that I developed Using HTML, CSS, and Boostrap I was designed my responsive portfolio website website to showcase my work experiences and projects.",
+            "skills": [
+                "html",
+                "css",
+                "bootstrap"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "title": "Computer Lab Technician",
+            "employer": "University Student Union",
+            "date": "August 2019 - Present",
+            "responsibilities": [
+                "Provide Computer Lab patrons with one on one assistance in various computer software programs, internet and other computer related services.",
+                "Assists with computer equipment and Software training for USU employees",
+                "Assists with, implements and facilitates computer training classes for CSUN students.",
+                "Trouble-shoots hardware and software problems"
+            ],
+            "skills": [
+                "Customer Service",
+                "Tech Support",
+                "Software Education"
+            ]
+        },
+        {
+            "title": "Senior Lifeguard & Swim Instructor",
+            "employer": "North Valley YMCA",
+            "date": "March 2014 - March 2020",
+            "responsibilities": [
+                "Responding to emergencies and rescuing swimmers in danger of drowning.",
+                "Overseeing activities at aquatic facility.",
+                "Maintaining records and reports.",
+                "Explaining and enforcing rules, regulations and policies to ensure safety of patrons."
+            ],
+            "skills": [
+                "Customer Service",
+                "Persistent under pressure",
+                "Communication"
+            ]
+        },
+        {
+            "title": "Certified Nursing Assistant",
+            "employer": "Lake Balboa Care Center",
+            "date": "June 2017 - April 2018",
+            "responsibilities": [
+                "State Certified Nurses Aide Licensed",
+                "Assisted patients with activities of daily living",
+                "Worked directly under the charge nurse to in accordance with a patient careplan",
+                "Communicated with patients and maintained HIPAA protocol"
+            ],
+            "skills": [
+                "Patient Care",
+                "Time Management",
+                "Detail Oriented",
+                "Communication"
+            ]
+        }
+    ]
+}
