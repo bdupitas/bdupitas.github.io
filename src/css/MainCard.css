@@ -1,0 +1,8 @@
+.resume-body {
+    top: 75px;
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    background-color: white;
+    margin: 0 auto;
+  }

@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Body from "./component/Body"
+
 function App() {
   return (
    <>
