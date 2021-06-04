@@ -6,7 +6,7 @@ import resume from "../docs/brandon-website-resume.pdf"
 
 const NavBar = () => {
   return (
-    <Navbar>
+    <Navbar className="nav-padding">
       <Navbar.Brand href="#home">
         <span className="brand-text">
           {">"} bdupitas&nbsp;
