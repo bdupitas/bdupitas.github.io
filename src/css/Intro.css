@@ -3,3 +3,10 @@
     margin: 0 auto;
     width: 300px;
   }
+
+  .top-name {
+    font-family: "Castoro", serif;
+    letter-spacing: 0.2px;
+    font-size: 34px;
+  }
+  
