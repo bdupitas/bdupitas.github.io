@@ -1,0 +1,359 @@
+/* font-family: 'Castoro', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif; */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* global selectors */
+body {
+  z-index: 1;
+  background-color: #222831;
+}
+
+.page-width {
+  margin: 0 auto;
+}
+
+/* navbar selector */
+.nav-padding {
+  padding: 5px 18%;
+}
+
+.brand-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.animate-cursor {
+  width: 10px;
+  height: 1rem;
+  background-color: orange;
+  border-radius: 1px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* global classes */
+.title {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: #7e7474;
+}
+
+.section-title {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* main body */
+.resume-body {
+  top: 75px;
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+/* resume head */
+
+.profile-photo {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.intro-card {
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+.skillbox {
+  padding: 4px;
+  color: black;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.skillbox:hover {
+  opacity: 0.5;
+  background-color: #00adb5;
+  color: white;
+  text-decoration: none;
+}
+
+.top-name {
+  font-family: "Castoro", serif;
+  letter-spacing: 0.2px;
+  font-size: 34px;
+}
+
+.about-card {
+  height: 330px;
+}
+
+/* resume details */
+.resume-detail-title {
+  padding-bottom: 20px;
+}
+
+.project-list {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.project-list li {
+  margin: 5px 0;
+}
+
+.skillbox--row {
+  margin-left: 0;
+}
+
+.experience-list {
+  list-style-type: none;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+}
+
+/* projects */
+
+.projects-portfolio li {
+  list-style: none;
+  padding-bottom: 25px;
+}
+
+/* employment */
+.employment-details {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.employment-item h4 {
+  margin-bottom: 0;
+}
+
+.employment-respon-list li {
+  list-style-type: square;
+}
+
+.employment-subtitle {
+  color: #7e7474;
+}
+
+.employment-respon {
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.employment-item {
+  clear: left;
+  margin: 0 0 20px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 16px;
+  padding-left: 36px;
+  margin-bottom: 16px;
+}
+
+.employment-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #8f96a3;
+}
+
+.employment-item::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 25px;
+  bottom: 0;
+  border-left: 1px dashed #8f96a3;
+}
+
+.education-ins {
+  padding-left: 55px;
+}
+
+.contact-info {
+  font-size: 14px;
+  color: gray;
+}
+
+.contact-text {
+  font-family: "Castoro", serif;
+}
+
+.jumbotron--bg {
+  background-color: #eeeeee;
+}
+
+/* RESPONSIVENESS */
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .mobile-size {
+    padding: 0;
+  }
+  .experience-list {
+    padding: 0;
+  }
+  .nav-padding {
+    padding: 5px 4%;
+  }
+  .skillbox {
+    font-size: 13px;
+    padding: 5px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  .top-name {
+    font-size: 24px;
+  }
+
+  .profile-photo {
+    width: 103px;
+    padding-top: 20px;
+  }
+
+  .employment-item {
+    padding-left: 0;
+    position: static;
+  }
+
+  .employment-item::after {
+    border-left: 0px dashed #8f96a3;
+  }
+
+  .mobile-row {
+    padding-top: 20px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* for media queries */
+  /* body { 
+    background-color: teal;
+  } */
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+  .nav-padding {
+    padding: 5px 8%;
+  }
+  .page-width {
+    max-width: 750px;
+  }
+
+  .mobile-size {
+    padding: 0;
+  }
+
+  .resume-body {
+    padding: 12px;
+  }
+
+  .skillbox {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .page-width {
+    max-width: 800px;
+  }
+
+  .profile-photo {
+    max-width: 180px;
+  }
+
+  .top-skill {
+    height: 200px;
+  }
+
+  .top-name {
+    letter-spacing: 0.2px;
+    font-size: 24px;
+  }
+
+  .top-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-padding {
+    padding: 5px 12%;
+  }
+
+  .page-width {
+    max-width: 850px;
+  }
+
+  .profile-photo {
+    max-width: 250px;
+  }
+
+  .top-skill {
+    height: 200px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .nav-padding {
+    padding: 5px 18%;
+  }
+
+  .page-width {
+    max-width: 1228px;
+  }
+}
