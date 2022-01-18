@@ -9,5 +9,6 @@ https://bdupitas.com
   <li>11 - 10 - 2020: Reimagined web-site, to be more appealing and more information driven.</li>
   <li>01 - 08 - 2021: added responsive elements to my webpage using Bootstrap mobile first approach </li>
   <li>03 - 04 - 2021: Adjusted colors and heights</li>
-  <lu>05- 22 - 2021 - 08 - 27 - 2021: Graduated with my CS degree, I have experienced full stack development, and I spent this summer working on getting my first job out of college.
+  <li>05- 22 - 2021 - 08 - 27 - 2021: Graduated with my CS degree, I have experienced full stack development, and I spent this summer working on getting my first job out of college.</li>
+  <li>11 - 29 - 2021: I started my new role as a Software Engineer at Dell Technologies</li>
 </ul>

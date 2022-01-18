@@ -321,13 +321,18 @@ Description: This webpage is designed and developed by Brandon Dupitas.
               </p>
             </div>
             <footer class=" contact-info text-center">
-              <p>Copyright 2021 by Brandon Dupitas</p>
+              <p>Copyright <span id="years"></span> by Brandon Dupitas</p>
             </footer>
           </div>
         </div>
       </div>
     </main>
 
+
+    <!-- Date JS -->
+    <script>
+      document.getElementById("years").innerHTML += new Date().getFullYear()
+    </script>
     <!-- bootstrap javascript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
