@@ -11,4 +11,5 @@ https://bdupitas.com
   <li>03 - 04 - 2021: Adjusted colors and heights</li>
   <li>05- 22 - 2021 - 08 - 27 - 2021: Graduated with my CS degree, I have experienced full stack development, and I spent this summer working on getting my first job out of college.</li>
   <li>11 - 29 - 2021: I started my new role as a Software Engineer at Dell Technologies</li>
+  <li>09 - 05 - 2022: Adding updates to my personal webpage, will be noted in Commit</li>
 </ul>
