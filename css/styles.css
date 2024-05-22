@@ -99,21 +99,21 @@ body {
 .skillbox {
     padding: 4px;
     color: black;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
     border: 1px solid gray;
     border-radius: 12px;
     opacity: 0.5;
     text-align: center;
 }
 
-.skillbox:hover {
+/* .skillbox:hover {
     opacity: 0.5;
     background-color: #00adb5;
     color: white;
     text-decoration: none;
-}
+} */
 
 .top-name {
     font-family: "Castoro", serif;
