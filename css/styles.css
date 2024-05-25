@@ -71,6 +71,18 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+.svg-icon {
+    height:15px;
+}
+
+.svg-button {
+    height: 45px;
+}
+
+.main-container-padding{
+    padding: 15%;
+}
+
 
 /* main body */
 
@@ -348,9 +360,10 @@ ul>li[class=list-item]::after {
 
 @media (min-width: 1200px) {
     .nav-padding {
-        padding: 5px 22%;
+        padding: 5px 15%;
     }
     .resume-body {
+        margin-top: 30px;
         max-width: 1228px;
     }
 }
