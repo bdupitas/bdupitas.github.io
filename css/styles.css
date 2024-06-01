@@ -120,6 +120,19 @@ body {
     text-align: center;
 }
 
+.skillbox--row a{
+
+        padding: 40px;
+        color: black;
+        /* margin-right: 5px; */
+        /* margin-bottom: 5px; */
+        font-size: 12px;
+        border: 1px solid white;
+        opacity: 1;
+        border-radius: 12px;
+        text-align: center;
+}
+
 /* .skillbox:hover {
     opacity: 0.5;
     background-color: #00adb5;
