@@ -48,9 +48,11 @@ body {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -72,14 +74,14 @@ body {
 }
 
 .svg-icon {
-    height:15px;
+    height: 15px;
 }
 
 .svg-button {
     height: 45px;
 }
 
-.main-container-padding{
+.main-container-padding {
     padding: 15%;
 }
 
@@ -120,17 +122,17 @@ body {
     text-align: center;
 }
 
-.skillbox--row a{
+.skillbox--row a {
 
-        padding: 40px;
-        color: black;
-        /* margin-right: 5px; */
-        /* margin-bottom: 5px; */
-        font-size: 12px;
-        border: 1px solid white;
-        opacity: 1;
-        border-radius: 12px;
-        text-align: center;
+    padding: 40px;
+    color: black;
+    /* margin-right: 5px; */
+    /* margin-bottom: 5px; */
+    font-size: 12px;
+    border: 1px solid white;
+    opacity: 1;
+    border-radius: 12px;
+    text-align: center;
 }
 
 /* .skillbox:hover {
@@ -265,34 +267,43 @@ ul>li[class=list-item]::after {
     .experience-list {
         padding: 0;
     }
+
     .nav-padding {
         padding: 5px 4%;
     }
+
     .skillbox {
         font-size: 13px;
         padding: 8px;
     }
+
     h3 {
         font-size: 18px;
     }
+
     h4 {
         font-size: 16px;
         text-decoration: underline;
     }
+
     .top-name {
         font-size: 24px;
     }
+
     .profile-photo {
         width: 103px;
         padding-top: 20px;
     }
+
     .employment-item {
         padding-left: 0;
         position: static;
     }
+
     .employment-item::after {
         border-left: 0px dashed #8f96a3;
     }
+
     .mobile-row {
         padding-top: 20px;
         margin-right: 0;
@@ -304,24 +315,30 @@ ul>li[class=list-item]::after {
 /* // Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+
     /* for media queries */
     body {
         /* background-color: teal; */
     }
+
     h3 {
         font-size: 18px;
     }
+
     h4 {
         font-size: 16px;
         text-decoration: underline;
     }
+
     .nav-padding {
         padding: 5px 8%;
     }
+
     .resume-body {
         padding: 12px;
         max-width: 750px;
     }
+
     .skillbox {
         font-size: 12px;
         padding: 4px;
@@ -335,16 +352,20 @@ ul>li[class=list-item]::after {
     .resume-body {
         max-width: 800px;
     }
+
     .profile-photo {
         max-width: 180px;
     }
+
     .top-skill {
         height: 200px;
     }
+
     .top-name {
         letter-spacing: 0.2px;
         font-size: 24px;
     }
+
     .top-subtitle {
         font-size: 14px;
     }
@@ -357,12 +378,15 @@ ul>li[class=list-item]::after {
     .nav-padding {
         padding: 5px 12%;
     }
+
     .resume-body {
         max-width: 850px;
     }
+
     .profile-photo {
         max-width: 250px;
     }
+
     .top-skill {
         height: 200px;
     }
@@ -375,6 +399,7 @@ ul>li[class=list-item]::after {
     .nav-padding {
         padding: 5px 15%;
     }
+
     .resume-body {
         margin-top: 30px;
         max-width: 1228px;
