@@ -1,409 +1,690 @@
-<!--
-Developer: Brandon Dupitas
-Version: v2-09052022
-Description: This webpage is designed and developed by Brandon Dupitas.
- -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- responsivenes support -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="description" content="brandon dupitas personal website">
-    <title>Brandon Dupitas</title>
-    <link rel="icon" href="images/favicon2.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Dupitas - Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-card: rgba(255, 255, 255, 0.8);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Devicons.dev -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
+        /* Navigation */
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- fontawesome cdn -->
-    <script src="https://kit.fontawesome.com/16a94d44a7.js" crossorigin="anonymous"></script>
-    <!-- google font cdn  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Castoro&family=Roboto+Mono&family=Ubuntu:wght@300;400&display=swap"
-        rel="stylesheet">
-    <!-- internal css -->
-    <link rel="stylesheet" href="css/styles.css">
+        .navbar-custom.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+            padding: 0.5rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-primary) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"><animateTransform attributeName="transform" type="translate" values="0 0;100 -50;0 0" dur="20s" repeatCount="indefinite"/></circle><circle cx="700" cy="700" r="150" fill="url(%23a)"><animateTransform attributeName="transform" type="translate" values="0 0;-80 60;0 0" dur="25s" repeatCount="indefinite"/></circle></svg>');
+            opacity: 0.6;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Cards */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Buttons */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary-custom:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* Skills Section */
+        .skill-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px white, 0 0 0 6px var(--primary-color);
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Project Cards */
+        .project-card {
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px 20px 0 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-light);
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 0 60px;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .timeline {
+                padding-left: 1.5rem;
+            }
+            
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- navigation bar -->
-        <nav class="navbar navbar-light nav-padding fixed-top navbar-expand-lg bg-light ">
-            <span class="navbar-brand h1 mb-0 mr-auto brand-text">
-                > bdupitas
-                <span class="animate-cursor"><span>&nbsp;&nbsp;</span></span>
-            </span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Brandon Dupitas</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- collapsible button for mobile-->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" target="_blank" href="https://github.com/bdupitas">
-                            <button type="button" class="btn">
-                                <img class="svg-button"
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
-
-                            </button>
-                        </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/bdupitas/">
-                            <button type="button" class="btn">
-                                <img class="svg-button"
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
-
-                            </button>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
-                    <li class="nav-item ml-auto">
-                        <a class="nav-link" target="_blank"
-                            href="https://docs.google.com/document/d/1uukhyryV0d_BZ-QaFXOfkUGohNln9KLYj1GhbG0QP_o/edit?usp=sharing">
-                            <button type="button" class="btn">
-                                <img class="svg-button" src="./svg/resume.svg">
-                            </button>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-        <!-- resume main content -->
-        <main>
-            <div class="container">
-                <div class="resume-body">
-                    <div class="row">
-                        <div class="col-4 text-center">
-                            <img class="profile-photo" src="./images/bran.jpg"
-                                alt="Graduation photo of Brandon Dupitas">
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <div class="fade-in">
+                        <h1 class="hero-title">Brandon Dupitas</h1>
+                        <p class="hero-subtitle">Software Engineer at Dell Technologies</p>
+                        <p class="hero-description">
+                            A passionate Software Engineer based in the Los Angeles Area. Specializing in Java, Spring Framework, and disaster recovery solutions. When I'm not coding, I enjoy traveling, theme parks, and exploring great food!
+                        </p>
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                            <a href="#contact" class="btn btn-primary-custom">
+                                <i class="fas fa-envelope me-2"></i>Let's Talk
+                            </a>
+                            <a href="#projects" class="btn btn-outline-custom">
+                                <i class="fas fa-code me-2"></i>View Projects
+                            </a>
                         </div>
-                        <div class="col-8 intro-card">
-                            <div class="mb-auto about-card">
-                                <h1 id="name" class="top-name title">Brandon Dupitas</h1>
-                                <p class="current-title subtitle">Software Engineer at Dell Technologies</p>
-                                <p class="about-me">A Software Engineer based in the Los Angeles Area. Computer stuff
-                                    aside, I enjoy travelling, themeparks, and eating good food!
-                                </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="fade-in">
+                        <img src="./images/bran.jpg" alt="Brandon Dupitas - Software Engineer" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in">What I Can Do</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card p-4 slide-in-left">
+                        <h4 class="mb-3">
+                            <i class="fas fa-code text-primary me-2"></i>
+                            Technical Skills
+                        </h4>
+                        <div class="skill-item">
+                            <div class="skill-icon bg-primary text-white">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div>
+                                <strong>Java & Spring Framework</strong>
+                                <p class="mb-0 text-muted">Enterprise application development</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon bg-success text-white">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div>
+                                <strong>JavaScript & React</strong>
+                                <p class="mb-0 text-muted">Modern web applications</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon bg-info text-white">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <strong>Database Management</strong>
+                                <p class="mb-0 text-muted">Data architecture & optimization</p>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <!-- skill boxes -->
-                    <div class="container">
-                        <div class="row ">
-                            <h3><i class="fas fa-coffee"></i> What can I do?</h3>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card p-4 slide-in-right">
+                        <h4 class="mb-3">
+                            <i class="fas fa-graduation-cap text-primary me-2"></i>
+                            Education
+                        </h4>
+                        <div class="timeline-content">
+                            <h5 class="text-primary mb-1">California State University, Northridge</h5>
+                            <p class="text-muted mb-2">Bachelor of Science, Computer Science</p>
+                            <p class="mb-0"><strong>Graduated:</strong> May 2021</p>
                         </div>
-                        <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <ul class="project-list">
-                                <li>
-                                    <Strong>Languages I can write in</Strong>
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <h4 class="text-primary mb-2">Software Engineer 1</h4>
+                        <h6 class="text-muted mb-3">Dell Technologies | November 2021 - Present</h6>
+                        <ul class="mb-0">
+                            <li>Design, develop, and maintain Disaster Recovery software using Java and Spring Framework technologies</li>
+                            <li>Participate in architecture discussions and reviews</li>
+                            <li>Participate in milestone demos and constructively weigh and integrate feedback from Product Designers and customers</li>
+                            <li>Work in a distributed-team environment</li>
+                            <li>Work closely with other development teams, QA, and customer support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <h4 class="text-primary mb-2">Computer Lab Technician</h4>
+                        <h6 class="text-muted mb-3">University Student Union | August 2019 - August 2021</h6>
+                        <ul class="mb-0">
+                            <li>Provide Computer Lab patrons with one-on-one assistance in various computer software programs</li>
+                            <li>Assist with computer equipment and software training for USU employees</li>
+                            <li>Implement and facilitate computer training classes for CSUN students</li>
+                            <li>Troubleshoot hardware and software problems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                                    <div class="row  justify-content-md-center skillbox--row">
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-                                        </a>
-
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
-                                        </a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                            <ul class="project-list">
-                                <li>
-                                    <Strong>Misc. Technology Experiences</Strong>
-                                    <div class="row justify-content-md-center skillbox--row">
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" /                                
-                                            </a>
-                                        <!-- <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">MySQL <i
-                                                class="fa-solid fa-database"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">MongoDB <i
-                                                class="fa-sharp fa-solid fa-database"></i></a> -->
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original-wordmark.svg" />
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
-
-                                        </a>
-                                        <!-- <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Graylog <i
-                                                class="fa-solid fa-tree"></i>
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Mockito <i
-                                                class="fa-solid fa-martini-glass-citrus"></i></a> -->
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original-wordmark.svg" />
-
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
-
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
-
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
-
-                                        </a>
-
-                                    </div>
-                                </li>
-                                <!-- <li>
-                                    <Strong>Technical Skills</Strong>
-                                    <div class="row justify-content-md-center skillbox--row">
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">MacOS <i
-                                                class="fa-brands fa-apple"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Linux <i
-                                                class="fa-brands fa-linux"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Windows <i
-                                                class="fa-brands fa-windows"></i></a>
-
-
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2"><i
-                                                class="fa-solid fa-diagram-predecessor"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">
-
-                                            <img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original-wordmark.svg" />
-
-                                        </a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Integration Test <i
-                                                class="fa-solid fa-diagram-predecessor"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Unit Test <i
-                                                class="fa-solid fa-vial-circle-check"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">JIRA <i
-                                                class="fa-brands fa-jira"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Git <i
-                                                class="fa-brands fa-git"></i></a>
-                                        <a class="skillbox col-12 col-sm-4 col-md-3 col-lg-2">Agile</a>
-
-
-                                    </div>
-                                </li> -->
-                            </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in">Projects</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card fade-in">
+                        <div class="project-header">
+                            <h4 class="mb-1">Concert</h4>
+                            <p class="mb-0 opacity-75">MERN Stack Web Application</p>
                         </div>
-
-                        <!-- Education information -->
-                        <hr>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 col-sm-3 pr-2">
-                                    <h3> <i class="fas fa-university"></i> Education</h3>
-                                </div>
-                                <div class="col-12 col-sm-9 education-ins">
-                                    <h4 class="title">California State University, Northridge</h4>
-                                    <p class="subtitle">Bachelors of Science, Computer Science. Graduated May 2021</p>
-                                </div>
+                        <div class="p-4">
+                            <p class="text-muted mb-3">A collaborative platform for students to interact virtually with features including tutoring access, study rooms, virtual whiteboards, and chat functionality.</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-success">Node.js</span>
+                                <span class="badge bg-info">MongoDB</span>
                             </div>
+                            <p class="text-muted small mb-0">August 2020 - Spring 2021</p>
                         </div>
-
-                        <!-- employment information -->
-                        <hr>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 col-md-12 col-sm-12 col-lg-3">
-                                    <h3> <i class="fas fa-briefcase"></i> Employment</h3>
-                                </div>
-                                <div class="col-12 col-md-12 col-sm-12 col-lg-9">
-                                    <div class="employment-details">
-                                        <ul>
-                                            <li class="list-item">
-                                                <h4>Software Engineer 1</h4>
-                                                <p class="employment-subtitle">Dell Technologies | November 2021 -
-                                                    Present</p>
-                                                <p class="employment-respon">Responsibilities:</p>
-                                                <ul class="employment-respon-list">
-                                                    <li>Design, develop, and maintain Disaster Recovery software using
-                                                        Java and Spring Framework technologies</li>
-                                                    <li>Participate in architecture discussions and reviews</li>
-                                                    <li>Participate in milestone demos and constructively weigh and
-                                                        integrate feedback from Product Designers and customers</li>
-                                                    <li>Work in a distributed-team environment</li>
-                                                    <li>Work closely with other development teams, QA, and customer
-                                                        support</li>
-                                                </ul>
-                                                <div class="row mobile-row pt-5">
-                                                    <a class="skillbox col-12 col-sm-4">Java 17</a>
-                                                    <a class="skillbox col-12 col-sm-4">Integration Testing</a>
-                                                    <a class="skillbox col-12 col-sm-4">Unit Testing</a>
-                                                    <a class="skillbox col-12 col-sm-4">CICD</a>
-                                                    <a class="skillbox col-12 col-sm-4">Rest API Development</a>
-
-                                                </div>
-                                            </li>
-
-                                            <li class="list-item">
-                                                <h4>Computer Lab Technician</h4>
-                                                <p class="employment-subtitle">University Student Union | August 2019 -
-                                                    August 2021</p>
-                                                <p class="employment-respon">Responsibilities:</p>
-                                                <ul class="employment-respon-list">
-                                                    <li>Provide Computer Lab patrons with one on one assistance in
-                                                        various computer software programs, internet and other computer
-                                                        related services. </li>
-                                                    <li>Assists with computer equipment and Software training for USU
-                                                        employees</li>
-                                                    <li>Assists with, implements and facilitates computer training
-                                                        classes for CSUN students.</li>
-                                                    <li>Trouble-shoots hardware and software problems </li>
-                                                </ul>
-                                                <div class="row mobile-row pt-5">
-                                                    <a class="skillbox col-12 col-sm-4">Customer Service</a>
-                                                    <a class="skillbox col-12 col-sm-4">Tech Support</a>
-                                                    <a class="skillbox col-12 col-sm-4">Software Education</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card fade-in">
+                        <div class="project-header">
+                            <h4 class="mb-1">Weather Application</h4>
+                            <p class="mb-0 opacity-75">React Weather App</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-muted mb-3">A responsive weather application that provides current conditions based on zip code, utilizing React components and integrating OpenWeatherMaps API.</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-warning">Express</span>
+                                <span class="badge bg-secondary">APIs</span>
                             </div>
+                            <p class="text-muted small mb-0">August 2020 - December 2020</p>
                         </div>
-                        <!-- projects portfolio -->
-                        <hr>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-9 col-md-12 col-sm-12  col-lg-3">
-                                    <h3><i class="fas fa-folder"></i> Projects</h3>
-                                </div>
-                                <div class="col-12 col-md-12 col-sm-12 col-lg-9">
-                                    <div class="projects-portfolio">
-                                        <ul>
-                                            <li class="list-item">
-                                                <h4 class="title">Concert</h4>
-                                                <p class="subtitle"> August 2020 - Spring 2021</p>
-                                                <p>Concert is a web application created to allow students to colaborate
-                                                    and interact with eachother virtually. This web application is
-                                                    created using the MERN stack. Some features of this web applications
-                                                    gives
-                                                    students the power to login and have access to tutors and the ablity
-                                                    to make studyrooms, virtual whiteboards, and chatroom.
-                                                </p>
-                                                <div class="row">
-                                                    <a class="skillbox col-4 col-sm-2">React.js 
-                                                        <i
-                                                            class="fa-brands fa-react"></i></a>
-                                                    <a class="skillbox col-4 col-sm-2">MongoDB <i
-                                                            class="fa-sharp fa-solid fa-database"></i></a>
-                                                    <a class="skillbox col-4 col-sm-2">Node.js <i
-                                                            class="fa-brands fa-node"></i></a>
-                                                    <a class="skillbox col-4 col-sm-2">Express</a>
-                                                </div>
-                                            </li>
-                                            <li class="list-item">
-                                                <h4 class="title">Weather Application
-                                                </h4>
-                                                <p class="subtitle"> August 2020 - December 2020</p>
-                                                <p>This is a weather application that allows you to check current
-                                                    conditions based on your zipcode! This web application utilizes
-                                                    React to create components, in addition to Node.js and Express to
-                                                    facilitate
-                                                    API calls from OpenWeatherMapsAPI as well as bing maps.
-                                                </p>
-                                                <div class="row">
-                                                    <a class="skillbox col-4 col-sm-2">Node.js <i
-                                                            class="fa-brands fa-node"></i></a>
-                                                    <a class="skillbox col-4 col-sm-2">Express</a>
-                                                    <a class="skillbox col-4 col-sm-2">EJS</a>
-                                                </div>
-                                            </li>
-                                            <li class="list-item">
-                                                <h4 class="title">bdupitas.github.io </h4>
-                                                <p class="subtitle"> June 2020 - Present</p>
-                                                <p>This is my personal webpage that I developed Using HTML, CSS, and
-                                                    Boostrap I was designed my responsive portfolio website website to
-                                                    showcase my work experiences and projects.
-                                                </p>
-                                                <div class="row">
-                                                    <a class="skillbox co-4 col-sm-2">HTML <i
-                                                            class="fa-brands fa-html5"></i></a>
-                                                    <a class="skillbox col-4 col-sm-2">CSS <i
-                                                            class="fa-brands fa-css3-alt"></i></a>
-                                                    <a class="skillbox col-4 col-sm-2">Bootstrap <i
-                                                            class="fa-brands fa-bootstrap"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Lets Talk -->
-                                <hr>
-                                <div class="jumbotron text-center jumbotron--bg">
-                                    <h3 class="display-4">Let's Talk</h3>
-                                    <hr class="my-4">
-                                    <p>I'd love to have a chat about any interesting opportunities</p>
-                                    <p class="lead">
-                                        <a class="btn btn-primary btn-lg "
-                                            href="mailto:brandondupitas@gmail.com ">Email</a>
-                                    </p>
-                                </div>
-                                <footer class=" contact-info text-center ">
-                                    <p>Copyright <span id="years "></span> by Brandon Dupitas</p>
-                                </footer>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card fade-in">
+                        <div class="project-header">
+                            <h4 class="mb-1">Portfolio Website</h4>
+                            <p class="mb-0 opacity-75">Personal Portfolio</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-muted mb-3">A responsive portfolio website designed to showcase work experiences and projects, built with HTML, CSS, and Bootstrap.</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-primary">HTML/CSS</span>
+                                <span class="badge bg-success">Bootstrap</span>
+                                <span class="badge bg-info">Responsive</span>
+                            </div>
+                            <p class="text-muted small mb-0">June 2020 - Present</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center fade-in">
+                        <h2 class="section-title">Let's Talk</h2>
+                        <p class="lead text-muted mb-4">I'd love to have a chat about any interesting opportunities or collaborations!</p>
+                        
+                        <div class="glass-card p-5">
+                            <div class="mt-4">
+                                <a href="mailto:hello@bdupitas.com" class="btn btn-primary-custom me-3">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Email
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <i class="fab fa-linkedin me-2"></i>LinkedIn Profile
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </section>
 
-        <!-- Date JS -->
-        <script>
-            document.getElementById("years ").innerHTML += new Date().getFullYear()
-        </script>
-        <!-- Bootstrap 5.3.3 -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-            crossorigin="anonymous"></script>
-    </div>
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; 2025 Brandon Dupitas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navigation links
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
